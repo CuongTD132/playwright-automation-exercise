@@ -8,7 +8,8 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
-    "test:task1": "playwright test --grep @task1"
+    "test:task1": "playwright test --grep @task1",
+    "test:task2": "playwright test --grep @task2"
   },
   "keywords": [],
   "author": "",
