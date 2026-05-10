@@ -17,30 +17,37 @@ E2E automation test project sử dụng Playwright + TypeScript cho [automatione
 ---
 
 ## Project Structure
+```plaintext
 playwright-automation-exercise/
-├── pages/                    # Page Object Model
-│   ├── BasePage.ts           # Base class - shared utilities
+├── pages/
+│   ├── BasePage.ts
 │   ├── HomePage.ts
-│   ├── AuthPage.ts           # Login + Signup
-│   ├── RegisterPage.ts       # Account registration
-│   ├── ProductsPage.ts       # Product listing + add to cart
-│   ├── CartPage.ts           # Cart verification
-│   ├── CheckoutPage.ts       # Checkout + payment
+│   ├── AuthPage.ts
+│   ├── RegisterPage.ts
+│   ├── ProductsPage.ts
+│   ├── CartPage.ts
+│   ├── CheckoutPage.ts
 │   └── DeleteAccountPage.ts
-├── tests/                    # Test specs
+│
+├── tests/
 │   ├── task1-register-user.spec.ts
 │   ├── task2-login-user.spec.ts
 │   ├── task3-add-product-to-cart.spec.ts
 │   ├── task4-checkout-flow.spec.ts
 │   └── task5-negative-login.spec.ts
+│
 ├── test-data/
-│   └── users.ts              # Test data & generators
+│   └── users.ts
+│
 ├── utils/
-│   └── testState.ts          # Shared state giữa các task
+│   └── testState.ts
+│
 ├── reports/
-│   └── html-report/          # HTML execution report
+│   └── html-report/
+│
 ├── playwright.config.ts
 └── tsconfig.json
+```
 
 ---
 
@@ -55,7 +62,7 @@ playwright-automation-exercise/
 
 ```bash
 # 1. Clone repository
-git clone <your-repo-url>
+git clone https://github.com/CuongTD132/playwright-automation-exercise.git
 cd playwright-automation-exercise
 
 # 2. Install dependencies

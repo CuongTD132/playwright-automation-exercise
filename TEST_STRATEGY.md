@@ -5,7 +5,7 @@
 ### Target System
 
 * URL: https://automationexercise.com
-* Browser: Chromium
+* Browser: Chromium, Firefox, Safari
 * Test Type: End-to-End UI Automation
 
 ### Covered Test Cases
