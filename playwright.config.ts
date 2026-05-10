@@ -14,29 +14,41 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 1 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   timeout: 60_000,
   expect: {
     timeout: 10_000,
   },
-  reporter: 'html',
+  reporter: [
+    ['html', { outputFolder: 'reports/html-report', open: 'never' }],
+    ['list'],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     baseURL: 'https://automationexercise.com',
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    screenshot: 'on',
-    video: 'on',
-    trace: 'on',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'retain-on-failure',
   },
+
+  // Đảm bảo chạy đúng thứ tự
+  testMatch: [
+    '**/task1-*.spec.ts',
+    '**/task2-*.spec.ts',
+    '**/task3-*.spec.ts',
+    '**/task4-*.spec.ts',
+    '**/task5-*.spec.ts',
+  ],
 
   /* Configure projects for major browsers */
   projects: [
@@ -45,15 +57,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
 
     /* Test against mobile viewports. */
     // {
