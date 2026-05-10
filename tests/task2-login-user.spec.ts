@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { AuthPage } from '../pages/AuthPage';
-import { loadTestUser } from '../utils/testState';
+import { HomePage } from '@pages/HomePage';
+import { AuthPage } from '@pages/AuthPage';
+import { loadTestUser } from '@utils/testState';
 
 test.describe('Task 2 — Login User @task2', () => {
 

@@ -1,6 +1,6 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import { UserData } from '../test-data/users';
+import fs from 'fs';
+import path from 'path';
+import { UserData } from '@test-data/users';
 
 const STATE_FILE = path.join(__dirname, '../test-data/.test-state.json');
 

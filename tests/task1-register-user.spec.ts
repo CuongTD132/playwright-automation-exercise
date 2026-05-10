@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { AuthPage } from '../pages/AuthPage';
-import { RegisterPage } from '../pages/RegisterPage';
-import { generateUser } from '../test-data/users';
-import { saveTestUser } from '../utils/testState';
+import { HomePage } from '@pages/HomePage';
+import { AuthPage } from '@pages/AuthPage';
+import { RegisterPage } from '@pages/RegisterPage';
+import { generateUser } from '@test-data/users';
+import { saveTestUser } from '@utils/testState';
 
 test.describe('Task 1 — Register User @task1', () => {
 

@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { AuthPage } from '../pages/AuthPage';
-import { ProductsPage } from '../pages/ProductsPage';
-import { CartPage } from '../pages/CartPage';
-import { CheckoutPage } from '../pages/CheckoutPage';
-import { DeleteAccountPage } from '../pages/DeleteAccountPage';
-import { loadTestUser } from '../utils/testState';
+import { test } from '@playwright/test';
+import { HomePage } from '@pages/HomePage';
+import { AuthPage } from '@pages/AuthPage';
+import { ProductsPage } from '@pages/ProductsPage';
+import { CartPage } from '@pages/CartPage';
+import { CheckoutPage } from '@pages/CheckoutPage';
+import { DeleteAccountPage } from '@pages/DeleteAccountPage';
+import { loadTestUser } from '@utils/testState';
 
 test.describe('Task 4 — Checkout Flow @task4', () => {
 

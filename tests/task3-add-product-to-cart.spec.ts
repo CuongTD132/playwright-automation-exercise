@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { ProductsPage, ProductInfo } from '../pages/ProductsPage';
-import { CartPage } from '../pages/CartPage';
+import { HomePage } from '@pages/HomePage';
+import { ProductsPage, ProductInfo } from '@pages/ProductsPage';
+import { CartPage } from '@pages/CartPage';
 
 test.describe('Task 3 — Add Product To Cart @task3', () => {
 
