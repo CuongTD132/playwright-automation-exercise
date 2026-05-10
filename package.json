@@ -9,7 +9,8 @@
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
     "test:task1": "playwright test --grep @task1",
-    "test:task2": "playwright test --grep @task2"
+    "test:task2": "playwright test --grep @task2",
+    "test:task3": "playwright test --grep @task3"
   },
   "keywords": [],
   "author": "",
