@@ -43,7 +43,7 @@ export class BasePage {
     async highlight(locator: Locator, color: string = '#f97316', durationMs: number = 600) {
         const el = await locator.elementHandle();
         if (!el) return;
-
+        if (process.env.CI) return; //remove Highlight to speed up tests in CI
         await this.page.evaluate(
             ({ el, color }) => {
                 const htmlEl = el as HTMLElement;
