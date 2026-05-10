@@ -45,7 +45,7 @@ test.describe('Task 1 — Register User @task1', () => {
         await test.step('Step 6: Verify logged in with correct username', async () => {
             await homePage.verifyLoggedInAs(user.name);
             // Save information for later tests
-            saveTestUser(user.email, user.password, user.name);
+            saveTestUser(user);
         });
 
         await test.step('Step 7: Logout', async () => {
